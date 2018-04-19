@@ -88,10 +88,10 @@
         <div class="payments_types part3"> <img src="image/payment_paypal.png" alt="paypal" title="PayPal"> <img src="image/payment_american.png" alt="american-express" title="American Express"> <img src="image/payment_2checkout.png" alt="2checkout" title="2checkout"> <img src="image/payment_maestro.png" alt="maestro" title="Maestro"> <img src="image/payment_discover.png" alt="discover" title="Discover"> </div>
         <!-- Payment Images Icon End-->
         <!-- Powered by Text Start-->
-        <div class="powered_text part3">
+        <!-- <div class="powered_text part3">
           <p>Polishop Html Template © 2013<br />
             Template By <a target="_blank" href="http://harnishdesign.net">Harnish Design</a></p>
-        </div>
+        </div> -->
         <!-- Powered by Text End-->
         <!-- Follow Social Icons Start-->
         <div class="social part3"> <a href="http://facebook.com/harnishdesign" target="_blank"><img src="image/facebook.png" alt="Facebook" title="Facebook"></a> <a href="https://twitter.com/#!/harnishdesign" target="_blank"><img src="image/twitter.png" alt="Twitter" title="Twitter"> </a> <a href="#" target="_blank"> <img src="image/googleplus.png" alt="Google+" title="Google+"> </a> <a href="#" target="_blank"> <img src="image/pinterest.png" alt="Pinterest" title="Pinterest"> </a> <a href="#" target="_blank"> <img src="image/rss.png" alt="RSS" title="RSS"> </a> <a href="http://www.vimeo.com/#" target="_blank"> <img src="image/vimeo.png" alt="Vimeo" title="Vimeo"> </a> </div>
