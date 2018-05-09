@@ -1,66 +1,28 @@
+<?php 
+include('../session.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="../img/favicon.png" rel="icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Admin</title>
 
-         <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
+        <?php 
+        include('global_css.php');
+        ?>
     </head>
     <body>
 
 
 
         <div class="wrapper">
-            <!-- Sidebar Holder -->
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                    <h3>Admin</h3>
-                </div>
-
-                <ul class="list-unstyled components">
-                    <p>Name :)</p>
- 
-                    <li style="background-color: #3d4a82;">
-                        <a href="#">Profile</a>
-                        <a href="#">Log-out</a>
-                    </li>
-                    <!-- <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Product</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="#">Home 1</a></li>
-                            <li><a href="#">Home 2</a></li>
-                            <li><a href="#">Home 3</a></li>
-                        </ul>
-                    </li> -->
-                    <li>
-                        <a href="#">Manage Account</a>
-                    </li>
-                    <li>
-                        <a href="#">Manage Product</a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Categories</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="#">Category</a></li>
-                            <li><a href="#">Subcategory</a></li>
-                        </ul>
-                    </li>
-                    <!-- <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li> -->
-                </ul>
-
-                
-            </nav>
+            <?php 
+            include('side_nav.php');
+            ?>
 
             <!-- Page Content Holder -->
             <div id="content">
@@ -111,17 +73,8 @@
 
 
 
-        <!-- jQuery CDN -->
-         <script src="js/jquery-1.12.0.min.js"></script>
-         <!-- Bootstrap Js CDN -->
-         <script src="js/bootstrap.min.js"></script>
-
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 $('#sidebarCollapse').on('click', function () {
-                     $('#sidebar').toggleClass('active');
-                 });
-             });
-         </script>
+        <?php 
+        include('global_jscript');
+        ?>
     </body>
 </html>

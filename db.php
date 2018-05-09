@@ -1,3 +1,4 @@
-<?php 
-$conn = mysqli_connect("localhost", "root", "","ecom_shoppingCart");
+<?php  
+	$conn = mysqli_connect("localhost", "root", "","ecom_shoppingcart");
 ?>
+

@@ -1,535 +1,133 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Index</title>
-<link href="image/favicon.png" rel="icon" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="clean modern and elegant corporate look eCommerce html template">
-<meta name="author" content="">
-<?php 
-include ('global_css.php');
-include ('global_js.php');
-include ('global_Google_Fonts.php');
-?>
-</head>
-<body>
-<div class="wrapper-wide">
-  <div class="main-wide">
-  <?php 
-    include ('global_header.php');
-    ?>
-    <div id="container">
-      <div id="content">
-        <!-- Nivo Slider Start -->
-        <section class="slider-wrapper">
-          <div id="slideshow" class="nivoSlider"> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="image/slider/slide-1.jpg" alt="slide-1" /></a> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="image/slider/slide-2.jpg" alt="slide-2" /></a> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="image/slider/slide-3.jpg" alt="slide-3" /></a> </div>
-        </section>
-        <script type="text/javascript"><!--
-$(document).ready(function() {
-	$('#slideshow').nivoSlider();
-});
---></script>
-        <!-- Nivo Slider End-->
-        <!-- Welcom Text Start-->
-        <div class="welcome">Welcome to Polishop</div>
-        <p><strong>Polishop</strong> Premium Responsive HTML Template. Polishop is a clean and Fully Responsive to use the template for every kind of eCommerce online shop. Great Looks on Desktops, Tablets and Mobiles. Well Documented. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <a href="#">BUY THEME</a>.</p>
-        <!-- Welcom Text End-->
-        <!-- Featured Product Start-->
-        <section class="box">
-          <div class="box-heading">Featured</div>
-          <div class="box-content">
-            <div class="box-product">
-              <div class="flexslider featured_carousel">
-                <ul class="slides">
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/lotto-sports-shoes-white-210x210.jpg" alt="Lotto Sports Shoes" /></a></div>
-                      <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">Lotto Sports Shoes</a></div>
-                      <div class="price"> ₱589.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/iphone_1-210x210.jpg" alt="iPhone 4s" /></a></div>
-                      <div class="name"><a href="product">iPhone 4s</a></div>
-                      <div class="price"> ₱120.68 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="rating"><img src="image/stars-4.png" alt="Based on 1 reviews." /></div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/apple_cinema_30-210x210.jpg" alt="Apple Cinema 30&quot;" /></a></div>
-                      <div class="name"><a href="product">Apple Cinema 30&quot;</a></div>
-                      <div class="price"> <span class="price-old">₱119.50</span><span class="price-new">₱107.75</span> </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/sony_vaio_1-210x210.jpg" alt="Friendly Jewelry" /></a></div>
-                      <div class="name"><a href="product">Friendly Jewelry</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/Jeep-Casual-Shoes-210x210.jpg" alt="Jeep-Casual-Shoes" /></a></div>
-                      <div class="name"><a href="product">Jeep-Casual-Shoes</a></div>
-                      <div class="price"> ₱131.25 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/htc_touch_hd_1-210x210.jpg" alt="iPhone 5s" /></a></div>
-                      <div class="name"><a href="product">iPhone 5s</a></div>
-                      <div class="price"> ₱119.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/ipod_touch_1-210x210.jpg" alt="Sunglass" /></a></div>
-                      <div class="name"><a href="product">Sunglass</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/reebok-men-sports-shoes-210x210.jpg" alt="Reebok Men Sports Shoes" /></a></div>
-                      <div class="name"><a href="product">Reebok Men Sports Shoes</a></div>
-                      <div class="price"> ₱119.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_tab_1-210x210.jpg" alt="Eagle Print Top" /></a></div>
-                      <div class="name"><a href="product">Eagle Print Top</a></div>
-                      <div class="price"> ₱236.99 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/nikon_d300_1-210x210.jpg" alt="Nikon D300" /></a></div>
-                      <div class="name"><a href="product">Nikon D300</a></div>
-                      <div class="price"> ₱942.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_syncmaster_941bw-210x210.jpg" alt="Samsung SyncMaster 941BW" /></a></div>
-                      <div class="name"><a href="product">Samsung SyncMaster 941BW</a></div>
-                      <div class="price"> ₱237.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <script type="text/javascript">
-(function() {
-  // store the slider in a local variable
-  var $window = $(window),
-      flexslider;
- 
-  // tiny helper function to add breakpoints
-  function getGridSize() {
-    return (window.innerWidth < 320) ? 1 :
-		   (window.innerWidth < 600) ? 2 :
-		   (window.innerWidth < 800) ? 3 :
-           (window.innerWidth < 900) ? 4 : 5;
-  }
-  $window.load(function() {
-    $('#content .featured_carousel').flexslider({
-      animation: "slide",
-      animationLoop: false,
-	  slideshow: false,
-      itemWidth: 210,
-      minItems: getGridSize(), // use function to pull in initial value
-      maxItems: getGridSize() // use function to pull in initial value
-    });
-  });
-}());
-</script>
-        <!-- Featured Product End-->
-        <!-- Product Tab Start-->
-        <section id="product-tab" class="product-tab">
-          <ul id="tabs" class="tabs">
-            <li><a href="#tab-latest">Latest</a></li>
-            <li><a href="#tab-bestseller">Bestseller</a></li>
-            <li><a href="#tab-special">Special</a></li>
-          </ul>
-          <div id="tab-latest" class="tab_content">
-            <div class="box-product">
-              <div class="flexslider latest_carousel_tab">
-                <ul class="slides">
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_syncmaster_941bw-210x210.jpg" alt="Samsung SyncMaster 941BW" /></a></div>
-                      <div class="name"><a href="product">Samsung SyncMaster 941BW</a></div>
-                      <div class="price"> ₱237.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/nikon_d300_1-210x210.jpg" alt="Nikon D300" /></a></div>
-                      <div class="name"><a href="product">Nikon D300</a></div>
-                      <div class="price"> ₱942.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/reebok-men-sports-shoes-210x210.jpg" alt="Reebok Men Sports Shoes" /></a></div>
-                      <div class="name"><a href="product">Reebok Men Sports Shoes</a></div>
-                      <div class="price"> ₱119.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/ipod_touch_1-210x210.jpg" alt="Sunglass" /></a></div>
-                      <div class="name"><a href="product">Sunglass</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_tab_1-210x210.jpg" alt="Eagle Print Top" /></a></div>
-                      <div class="name"><a href="product">Eagle Print Top</a></div>
-                      <div class="price"> ₱236.99 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/iphone_1-210x210.jpg" alt="iPhone 4s" /></a></div>
-                      <div class="name"><a href="product">iPhone 4s</a></div>
-                      <div class="price"> ₱120.68 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="rating"><img src="image/stars-4.png" alt="Based on 1 reviews." /></div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/htc_touch_hd_1-210x210.jpg" alt="iPhone 5s" /></a></div>
-                      <div class="name"><a href="product">iPhone 5s</a></div>
-                      <div class="price"> ₱119.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/apple_cinema_30-210x210.jpg" alt="Apple Cinema 30&quot;" /></a></div>
-                      <div class="name"><a href="product">Apple Cinema 30&quot;</a></div>
-                      <div class="price"> <span class="price-old">₱119.50</span><span class="price-new">₱107.75</span> </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/sony_vaio_1-210x210.jpg" alt="Friendly Jewelry" /></a></div>
-                      <div class="name"><a href="product">Friendly Jewelry</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/Jeep-Casual-Shoes-210x210.jpg" alt="Jeep-Casual-Shoes" /></a></div>
-                      <div class="name"><a href="product">Jeep-Casual-Shoes</a></div>
-                      <div class="price"> ₱131.25 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/lotto-sports-shoes-white-210x210.jpg" alt="Lotto Sports Shoes" /></a></div>
-                      <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">Lotto Sports Shoes</a></div>
-                      <div class="price"> ₱589.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div id="tab-bestseller" class="tab_content">
-            <div class="box-product">
-              <div class="flexslider bestseller_carousel_tab">
-                <ul class="slides">
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/apple_cinema_30-210x210.jpg" alt="Apple Cinema 30&quot;" /></a></div>
-                      <div class="name"><a href="product">Apple Cinema 30&quot;</a></div>
-                      <div class="price"> <span class="price-old">₱119.50</span><span class="price-new">₱107.75</span> </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/sony_vaio_1-210x210.jpg" alt="Friendly Jewelry" /></a></div>
-                      <div class="name"><a href="product">Friendly Jewelry</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/Jeep-Casual-Shoes-210x210.jpg" alt="Jeep-Casual-Shoes" /></a></div>
-                      <div class="name"><a href="product">Jeep-Casual-Shoes</a></div>
-                      <div class="price"> ₱131.25 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/lotto-sports-shoes-white-210x210.jpg" alt="Lotto Sports Shoes" /></a></div>
-                      <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">Lotto Sports Shoes</a></div>
-                      <div class="price"> ₱589.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/ipod_touch_1-210x210.jpg" alt="Sunglass" /></a></div>
-                      <div class="name"><a href="product">Sunglass</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div id="tab-special" class="tab_content">
-            <div class="box-product">
-              <div class="flexslider special_carousel_tab">
-                <ul class="slides">
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/Jeep-Casual-Shoes-210x210.jpg" alt="Jeep-Casual-Shoes" /></a></div>
-                      <div class="name"><a href="product">Jeep-Casual-Shoes</a></div>
-                      <div class="price"> ₱131.25 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/lotto-sports-shoes-white-210x210.jpg" alt="Lotto Sports Shoes" /></a></div>
-                      <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">Lotto Sports Shoes</a></div>
-                      <div class="price"> ₱589.50 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/ipod_touch_1-210x210.jpg" alt="Sunglass" /></a></div>
-                      <div class="name"><a href="product">Sunglass</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_syncmaster_941bw-210x210.jpg" alt="Samsung SyncMaster 941BW" /></a></div>
-                      <div class="name"><a href="product">Samsung SyncMaster 941BW</a></div>
-                      <div class="price"> ₱237.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/ipod_touch_1-210x210.jpg" alt="Sunglass" /></a></div>
-                      <div class="name"><a href="product">Sunglass</a></div>
-                      <div class="price"> ₱1,177.00 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="slide-inner">
-                      <div class="image"><a href="product"><img src="image/product/samsung_tab_1-210x210.jpg" alt="Eagle Print Top" /></a></div>
-                      <div class="name"><a href="product">Eagle Print Top</a></div>
-                      <div class="price"> ₱236.99 </div>
-                      <div class="cart">
-                        <input type="button" value="Add to Cart" class="button" />
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <script type="text/javascript">
-(function() {
-  // store the slider in a local variable
-  var $window = $(window),
-      flexslider;
-  // tiny helper function to add breakpoints
-  function getGridSize() {
-    return (window.innerWidth < 320) ? 1 :
-		   (window.innerWidth < 600) ? 2 :
-		   (window.innerWidth < 800) ? 3 :
-           (window.innerWidth < 900) ? 4 : 5;
-  }
-  $window.load(function() {
-    $('#product-tab .featured_carousel_tab, #product-tab .latest_carousel_tab, #product-tab .bestseller_carousel_tab, #product-tab .special_carousel_tab').flexslider({
-      animation: "slide",
-      animationLoop: false,
-	  slideshow: false,
-      itemWidth: 210,
-      minItems: getGridSize(), // use function to pull in initial value
-      maxItems: getGridSize(), // use function to pull in initial value
-	  start: function(){
-		  $("#product-tab .tab_content").addClass("deactive");
-		  $("#product-tab .tab_content:first").removeClass("deactive"); //Show first tab content
-		  } });
-  });
+<?php
+include('login_action.php'); // Includes Login Script
 
-$(document).ready(function() {
-    //Default Action
-    $("ul#tabs li:first").addClass("active").show(); //Activate first tab
-    //On Click Event
-    $("ul#tabs li").click(function() {
-        $("ul#tabs li").removeClass("active"); //Remove any "active" class
-        $(this).addClass("active"); //Add "active" class to selected tab
-		$("#product-tab .tab_content").hide(); 
-        var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
-        $(activeTab).fadeIn(); //Fade in the active content
-        return false;
-    });
-});}());
-</script>
-        <!-- Product Tab End-->
-        <!-- Carousel Start-->
-        <section id="carousel">
-          <ul class="jcarousel-skin-opencart">
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-          </ul>
-        </section>
-        <!-- Carousel End-->
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
- <?php 
-include('global_footer.php');
- ?>
-</div>
-</body>
+if(isset($_SESSION['login_user']))
+{           
+           echo  $email=isset($_SESSION['login_user']);// passing the session user to new user variable
+           
+            echo  $user_ID=isset($_SESSION['user_ID']);
+            echo  $user_level=isset($_SESSION['user_level']);
+            // $result =mysqli_query($conn,"SELECT * FROM `user_account` WHERE user_Email = '$email'");
+    
+            // $rows = mysqli_fetch_array($result);
+            if ($user_level == '1') //checking if acclevel is equal to 0
+                {   
+                    
+                }
+                elseif ($user_level == '2')  //checking if acclevel is equal to 1
+                {
+                   
+                    header("location: admin/index.php"); // retain to student Level
+                    
+                } 
+                else
+                {
+
+                }
+            
+      
+          
+                
+    
+            
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Rhalp Darren R. Cabrera" content="">
+
+    <title>Log-in</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+  <body>
+<?php 
+if (isset($_SESSION['user_ID'])) {
+   ?>
+<a href="logout.php">logout</a>
+   <?php
+}
+
+else{
+    ?>
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+ 
+
+
+                    <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title" >Sign In</div>
+                      
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form role="form" method="post">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="username" type="text" class="form-control" name="email" value="" placeholder="username">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="password">
+                                    </div>
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <button type="submit" class="btn btn-success pull-right" name="submit"><span class="glyphicon glyphicon-check"></span> Login</button>
+
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
+                    </div>
+  
+
+
+        </div>
+
+    </div> <!-- /container -->
+    <?php
+}
+?>
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
