@@ -309,7 +309,7 @@ else{
           <div class="checkout-heading">Step 1: Account & Billing Details</div>
           <div class="checkout-content" style="display: block;">
             <?php 
-            if (isset($cus_ID)) {
+            if (isset($_SESSION['user_ID'])) {
              ?>
              <form >
           <br>
@@ -318,18 +318,18 @@ else{
           <div class="content">
             <table class="form">
                <?php 
-                if (isset($cus_ID)) {
-                  $sql = "SELECT * FROM `customer` WHERE cus_ID = '$cus_ID'";
+                if (isset($_SESSION['user_ID'])) {
+                  $sql = "SELECT * FROM `user_account` WHERE user_ID = '".$_SESSION['user_ID']."'";
                   $result = $conn->query($sql);
 
                   if ($result->num_rows > 0) {
                       // output data of each row
                       $row = $result->fetch_assoc();
-                           $cus_Name = $row["cus_Name"];
-                           $cus_Email = $row["cus_Email"];
-                           $cus_Phone = $row["cus_Phone"];
-                           $cus_Address = $row["cus_Address"];
-                           $cus_password = $row["cus_password"];
+                           $cus_Name = $row["user_Name"];
+                           $cus_Email = $row["user_Email"];
+                           $cus_Phone = $row["user_Phone"];
+                           $cus_Address = $row["user_Address"];
+                           $cus_password = $row["user_password"];
                       
                   } 
                   else {
@@ -339,19 +339,19 @@ else{
               <tbody>
                 <tr>
                   <td><span class="required">*</span> Full Name:</td>
-                  <td><input class="large-field" type="text" value="<?php echo $row["cus_Name"];?>" name="fullname"   required=""  ></td>
+                  <td><input class="large-field" type="text" value="<?php echo  $cus_Name;?>" name="fullname"   required=""  ></td>
                 </tr>
                 <tr>
                   <td><span class="required">*</span> E-Mail:</td>
-                  <td><input class="large-field" type="text" value="<?php echo $row["cus_Email"];?>" name="email" required=""  ></td>
+                  <td><input class="large-field" type="text" value="<?php echo  $cus_Email;?>" name="email" required=""  ></td>
                 </tr>
                 <tr>
                   <td><span class="required">*</span> Phone:</td>
-                  <td><input class="large-field" type="text" value="<?php echo $row["cus_Phone"];?>" name="phone" required=""  ></td>
+                  <td><input class="large-field" type="text" value="<?php echo $cus_Phone;?>" name="phone" required=""  ></td>
                 </tr>
                 <tr>
                   <td><span class="required">*</span> Address:</td>
-                  <td><input class="large-field" type="text" value="<?php echo $row["cus_Address"];?>" name="address" required=""  ></td>
+                  <td><input class="large-field" type="text" value="<?php echo $cus_Address;?>" name="address" required=""  ></td>
                 </tr>
               </tbody>
             </table>

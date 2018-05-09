@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 session_start();
-if (isset($cus_ID)) {
+if (isset($_SESSION['user_ID'])) {
 	$sql = "SELECT 
 ord_det.*,
 prod.prod_Img,
@@ -13,7 +13,7 @@ ord.or_Date
 FROM `order`  ord 
 INNER JOIN order_detail ord_det ON ord_det.serial_ID = ord.serial_ID 
 INNER JOIN products prod ON prod.prod_ID = ord_det.prod_ID 
-WHERE ord.cus_ID = '$cus_ID'";
+WHERE ord.cus_ID = '".$_SESSION['user_ID']."'";
 $result = $conn->query($sql);
 $_SESSION['item_cart_count'] =  $result->num_rows;
 if ($result->num_rows > 0) {
