@@ -31,6 +31,14 @@ if(isset($_SESSION['login_user']))
     
             
 }
+if (isset($_REQUEST['category'])) {
+$cat = $_REQUEST['category'];
+$filter_item = " WHERE prod.cat_ID = $cat";
+       
+}
+else{
+   $filter_item = "";
+}
 
 function getUserIP(){
   switch (true) {
@@ -152,41 +160,29 @@ else
 <?php 
 include('navigation_bar.php');
 ?>
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -50px;">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="img/banner-c1.jpg" alt="">
-    </div>
-    <div class="item">
-      <img src="img/banner-c2.jpg" alt="">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 <br>
 <div class="container">  
-<h1 style="background-color: white; padding: 5px; border-radius: 5px;  box-shadow: 5px 5px 5px grey; border: solid 1px; border-color: #337ab7;">LATEST PRODUCTS</h1>  
+<h1 style="background-color: white; padding: 5px; border-radius: 5px;  box-shadow: 5px 5px 5px grey; border: solid 1px; border-color: #337ab7;">LATEST PRODUCTS
+  <?php 
+  if (isset($_REQUEST['category'])) {
+    $cat = $_REQUEST['category'];
+    $sql  = "SELECT * FROM `category` WHERE cat_ID = $cat";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $cat_Name = $row['cat_Name'];
+    echo "<p style='font-size: 25px;'>".$cat_Name ."</p>";
+  }
+  else{}
+  ?>
+
+</h1>  
+
   <div class="row">
     <?php 
 
 $sql = "SELECT prod.prod_Img,prod.prod_Name,prod.prod_Description,prod.prod_Price,prod.prod_Qnty,prod.prod_date, x.or_Qnty_item,prod.prod_ID FROM `products`  prod
-LEFT JOIN (SELECT sum(od.or_Qnty) or_Qnty_item,od.prod_ID FROM order_detail od Group by od.prod_ID)  x ON x.prod_ID = prod.prod_ID 
+LEFT JOIN (SELECT sum(od.or_Qnty) or_Qnty_item,od.prod_ID FROM order_detail od Group by od.prod_ID)  x ON x.prod_ID = prod.prod_ID  $filter_item 
 ORDER BY prod.`prod_date` 
 DESC LIMIT 25";
 $result = $conn->query($sql);
@@ -278,33 +274,7 @@ if ($result->num_rows > 0) {
       });
       
     });
-    // $(document).on('click', '#button_cart', function(e){
-      
-    //   e.preventDefault();
-      
-    //   var uid = $(this).data('id');   // it will get id of clicked row
-      
-    //   $('#addcart-content').html(''); // leave it blank before ajax call
-    //   $('#addcart-loader').show();      // load ajax loader
-      
-    //   $.ajax({
-    //     url: 'action.php',
-    //     type: 'POST',
-    //     data: 'add_cart='+uid,
-    //     dataType: 'html'
-    //   })
-    //   .done(function(data){
-    //     console.log(data);  
-    //     $('#addcart-content').html('');    
-    //     $('#addcart-content').html(data); // load response 
-    //     $('#addcart-loader').hide();      // hide ajax loader 
-    //   })
-    //   .fail(function(){
-    //     $('#addcart-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
-    //     $('#addcart-loader').hide();
-    //   });
-      
-    // });
+   });
 </script>
   <!-- Modal -->
 <div id="modal_viewproduct1" class="modal fade" role="dialog" style=" padding: 50px !important;">
@@ -331,52 +301,3 @@ if ($result->num_rows > 0) {
   </div>
 </div>
 
-<div id="modal_viewproduct1" class="modal fade" role="dialog" style=" padding: 50px !important;">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Product Details</h4>
-      </div>
-      <div class="modal-body">
-        <div id="viewprod1-loader" style="display: none; text-align: center;">
-            <img src="img/ajax-loader.gif">
-        </div>
-        <!-- content will be load here -->                          
-        <div id="viewprod1-content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- <div id="add_cart_m" class="modal fade" role="dialog" style=" padding: 50px !important;">
-  <div class="modal-dialog modal-lg">
-
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add to Cart</h4>
-      </div>
-      <div class="modal-body">
-        <div id="addcart-loader" style="display: none; text-align: center;">
-            <img src="img/ajax-loader.gif">
-        </div>
-                            
-        <div id="addcart-content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
- -->

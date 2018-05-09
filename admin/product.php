@@ -83,7 +83,7 @@ include('../session.php');
                         } else {
                             
                         }
-                        $conn->close();
+                        
                         ?>
                     </tbody>
                 </table>
@@ -95,6 +95,7 @@ include('../session.php');
 
 
         <?php 
+
         include('global_jscript.php');
         ?>
     <script type="text/javascript">
@@ -221,7 +222,7 @@ include('../session.php');
         
         
         <div class="form-group">
-          <label for="prod_Img"><img id="blah" src="#" alt="your image" class="img-circle" height="250" width="250" /></label>
+          <label for="prod_Img"><img id="blah" src="../img/item-default.jpg" alt="your image" class="img-circle" height="250" width="250" /></label>
           <input type='file' name="imahe"  class="form-control" onchange="readURL(this);" />
         </div>
         <div class="form-group">
@@ -235,6 +236,26 @@ include('../session.php');
         <div class="form-group">
           <label for="name">Quantity:</label>
           <input type="fullname" class="form-control" name="prod_Qnty" required="">
+        </div>
+        <div class="form-group">
+          <label for="Category">Category:</label>
+          <select  class="form-control" name="category" required="">
+            <?php 
+            $sql = "SELECT * FROM `category`";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    ?>
+                    <option value="<?php echo $row['cat_ID']?>"><?php echo $row['cat_Name']?></option>
+                    <?php
+                }
+            }
+            $conn->close();
+            ?>
+            
+          </select>
         </div>
         <div class="form-group">
           <label for="email">Description:</label>

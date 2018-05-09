@@ -104,6 +104,7 @@ if (isset($_POST['product_add'])) {
 	 $descr = $_POST['descr'];
 	 $prod_Price = $_POST['prod_Price'];
 	 $prod_Qnty = $_POST['prod_Qnty'];
+	 $category = $_POST['category'];
 
 	 $sql = "INSERT INTO `products` (
 	`prod_ID`,
@@ -112,14 +113,14 @@ if (isset($_POST['product_add'])) {
 	   `prod_Description`,
 	    `prod_Price`,
 	     `prod_Qnty`,
-	      `prod_date`) 
+	      `prod_date`,`cat_ID`) 
 	      VALUES (NULL,
 	       '$imahe',
 	        '$prod_Name',
 	         '$descr',
 	          '$prod_Price',
 	           '$prod_Qnty',
-	            CURRENT_TIMESTAMP);";
+	            CURRENT_TIMESTAMP),'$category';";
 	if ($conn->query($sql) === TRUE) {
 	   echo "<script>alert('Succesfully Added New Product!');
 		window.location='product';
@@ -139,6 +140,7 @@ if (isset($_POST['product_edit'])) {
 	 $descr = $_POST['descr'];
 	 $prod_Price = $_POST['prod_Price'];
 	 $prod_Qnty = $_POST['prod_Qnty'];
+	 $category = $_POST['category'];
 	//if user update product  image 
 	if($_FILES['imahe']['name'] == "") {
 
@@ -146,7 +148,8 @@ if (isset($_POST['product_edit'])) {
 	   `prod_Name` = '$prod_Name',
 	    `prod_Description` = '$descr',
 	     `prod_Price` = '$prod_Price',
-	      `prod_Qnty` = '$prod_Qnty'
+	      `prod_Qnty` = '$prod_Qnty',
+	      `cat_ID` = '$category'
 	       WHERE `products`.`prod_ID` = $id";
 	}
 	//if user update product and doesnt now change image 
@@ -157,7 +160,8 @@ if (isset($_POST['product_edit'])) {
 	   `prod_Name` = '$prod_Name',
 	    `prod_Description` = '$descr',
 	     `prod_Price` = '$prod_Price',
-	      `prod_Qnty` = '$prod_Qnty'
+	      `prod_Qnty` = '$prod_Qnty',
+	      `cat_ID` = '$category'
 	       WHERE `products`.`prod_ID` = $id";
 	}
 	//perform query

@@ -202,6 +202,26 @@ if ($result->num_rows > 0) {
           <input type="fullname" class="form-control" name="prod_Qnty" required="" value="<?php echo $prod_Qnty?>">
         </div>
         <div class="form-group">
+          <label for="Category">Category:</label>
+          <select  class="form-control" name="category" required="">
+            <?php 
+            $sql = "SELECT * FROM `category`";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    ?>
+                    <option value="<?php echo $row['cat_ID']?>"><?php echo $row['cat_Name']?></option>
+                    <?php
+                }
+            }
+            $conn->close();
+            ?>
+            
+          </select>
+        </div>
+        <div class="form-group">
           <label for="email">Description:</label>
           <textarea name="descr" id="descr1" rows="10" cols="80">
                <?php echo $content?>

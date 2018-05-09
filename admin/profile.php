@@ -49,7 +49,7 @@ include('../session.php');
                 <div class="container">    
                   <div class="row">
                       <div class="panel panel-default">
-                      <div class="panel-heading"><h2>Profile3</h2> <button class="btn btn-success pull-right" style="margin-top: -50px;" data-toggle="modal" data-target="#Edit">EDIT</button></div>
+                      <div class="panel-heading"><h2>Profile Details</h2> <button class="btn btn-success pull-right" style="margin-top: -50px;" data-toggle="modal" data-target="#Edit">EDIT</button></div>
                        <div class="panel-body">
                       <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                        <img alt="User Pic" src="../img/propic.jpg" id="profile-image1" class="img-circle img-responsive"> 
