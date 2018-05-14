@@ -218,7 +218,7 @@ include('../session.php');
         <h4 class="modal-title">Add Product</h4>
       </div>
       <div class="modal-body">
-       <form  method="POST" action="action.php"   enctype="multipart/form-data" runat="server">
+       <form  method="POST" action="action.php"    runat="server" enctype="multipart/form-data">
         
         
         <div class="form-group">

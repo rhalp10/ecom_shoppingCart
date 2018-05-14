@@ -106,21 +106,8 @@ if (isset($_POST['product_add'])) {
 	 $prod_Qnty = $_POST['prod_Qnty'];
 	 $category = $_POST['category'];
 
-	 $sql = "INSERT INTO `products` (
-	`prod_ID`,
-	 `prod_Img`,
-	  `prod_Name`,
-	   `prod_Description`,
-	    `prod_Price`,
-	     `prod_Qnty`,
-	      `prod_date`,`cat_ID`) 
-	      VALUES (NULL,
-	       '$imahe',
-	        '$prod_Name',
-	         '$descr',
-	          '$prod_Price',
-	           '$prod_Qnty',
-	            CURRENT_TIMESTAMP),'$category';";
+
+	 $sql = "INSERT INTO `products` (`prod_ID`, `prod_Img`, `prod_Name`, `prod_Description`, `prod_Price`, `prod_Qnty`, `prod_date`, `cat_ID`) VALUES (NULL, '$imahe', '$prod_Name', '$descr', '$prod_Price', '$prod_Qnty', CURRENT_TIMESTAMP, '$category');";
 	if ($conn->query($sql) === TRUE) {
 	   echo "<script>alert('Succesfully Added New Product!');
 		window.location='product';

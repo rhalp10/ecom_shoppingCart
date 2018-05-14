@@ -2,7 +2,7 @@
   function updateContent(){
 
   $("#showcart").load('ajax_cart.php'); 
-  $("#showcart1").load('ajax_cart1.php'); 
+  
   }
   setInterval(function() {updateContent()}, 1000);
   
@@ -68,6 +68,8 @@
       
     });
 
+
+
       
         $(document).on('click', '#minus_product', function(e){
       
@@ -82,7 +84,7 @@
         dataType: 'html'
       })
       .done(function(data){
-        
+       
       })
       .fail(function(){
         
@@ -116,4 +118,3 @@
   }); 
 
 </script>
-

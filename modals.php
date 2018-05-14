@@ -889,27 +889,3 @@ else{
   </div>
 </div>
 
-  <!-- Modal -->
-<div id="modal_viewproduct" class="modal fade" role="dialog" style=" padding: 50px !important;">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Product Details</h4>
-      </div>
-      <div class="modal-body">
-        <div id="viewprod-loader" style="display: none; text-align: center;">
-            <img src="img/ajax-loader.gif">
-        </div>
-        <!-- content will be load here -->                          
-        <div id="viewprod-content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>

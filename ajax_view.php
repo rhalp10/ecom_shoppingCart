@@ -3,12 +3,6 @@ include("db.php");
 session_start();
 if (isset($_REQUEST['id']) ){
 
-if (isset($_SESSION['user_ID'])) {
- // echo "set";
-}
-else{
-// echo "unset";
-}
 	$id = $_REQUEST['id'];
 	$sql = "SELECT * FROM `products`  WHERE prod_ID = '$id'";
 	$result  = $conn->query($sql);
@@ -82,7 +76,7 @@ else{
                   <input id="qtyz" type="hidden" class="w30" name="quantity" size="2" value="" max="" />
 
                   <input type="hidden" class="w30" name="priceee" value="<?php echo $prod_Price ?>" />
-                  <input type="submit" class="button" name="add_cart" vale="Add to Cart">
+                  <input type="submit" class="button" name="add_cart" value="Add to Cart">
                   </form>
               </div>
              <!--  <div><a href="#" class="wishlist" >Add to Wish List</a> <a href="#" class="wishlist" >Add to Compare</a></div> -->
@@ -108,7 +102,7 @@ else{
 		<?php
 	}
 	else{
-    // echo "asdasd";
+    echo "asdasd";
   }
 }
 

@@ -44,8 +44,21 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>  Account
+        <?php 
+        if (isset($_SESSION['user_Name'])) {
+          ?>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>  <?php echo $_SESSION['user_Name']?>
         <span class="caret"></span></a>
+          <?php
+        }
+        else{
+          ?>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>  Account
+        <span class="caret"></span></a>
+          <?php
+        }
+        ?>
+        
         <ul class="dropdown-menu " >
           <?php 
           if (isset($_SESSION['user_ID'])) {

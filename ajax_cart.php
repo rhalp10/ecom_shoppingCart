@@ -34,13 +34,22 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $serial_ID = $row["serial_ID"];
         $prod_ID = $row["prod_ID"];
+        $or_ID = $row["or_ID"];
         ?>
 		<tr>
 		  <td><?php echo $row["or_ID"]?></td>
 		  <td><?php echo $row["prod_Name"]?></td>
-		  <td><?php echo $row["or_Qnty"]?> <div class="btn-group"><button class="glyphicon glyphicon-plus  btn-success" data-target="#plus_prod" data-id="<?php echo $prod_ID; ?>"  id="plus_product"></button><button class="glyphicon glyphicon-minus  btn-danger"  data-target="#minus_prod" data-id="<?php echo $prod_ID; ?>"  id="minus_product"></button></div></td>
-		  <td>₱ <?php echo number_format($row["or_Price"],2)?></td>
-		  <td>₱ <?php echo number_format($row["item_x"],2)?> <button class="glyphicon glyphicon-trash pull-right  btn-danger "  onclick="alert('delete-<?php echo $prod_ID?>');"></button></td>
+		  <td>
+				<div class="btn-group ">
+					<a href="action?plus_product=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-plus   btn-danger pull-left"></button></span></a>
+					<?php echo $row["or_Qnty"]?> 
+					<a href="action?minus_product=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-minus pull-right  btn-danger "></button></span></a>
+				</div>
+			</td>			
+			<td>₱ <?php echo number_format($row["or_Price"],2)?></td>
+			<td>₱ <?php echo number_format($row["item_x"],2)?>
+				<a href="action?delete_ord_i=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-trash pull-right  btn-danger "></button></span></a>
+			</td>
 		</tr>
         <?php
         
@@ -133,13 +142,23 @@ else{
 	  	if ($result->num_rows > 0) {
 	  		while($row = $result->fetch_assoc()) {
         	$serial_ID = $row["serial_ID"];
+        	 $prod_ID = $row["prod_ID"];
+        	 $or_ID = $row["or_ID"];
 	  		 ?>
 		  <tr>
 	  		<td><?php echo $row["or_ID"]?></td>
 			<td><?php echo $row["prod_Name"]?></td>
-			<td><?php echo $row["or_Qnty"]?></td>
+			<td>
+				<div class="btn-group ">
+					<a href="action?plus_product=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-plus   btn-danger pull-left"></button></span></a>
+					<?php echo $row["or_Qnty"]?> 
+					<a href="action?minus_product=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-minus pull-right  btn-danger "></button></span></a>
+				</div>
+			</td>			
 			<td>₱ <?php echo number_format($row["or_Price"],2)?></td>
-			<td>₱ <?php echo number_format($row["item_x"],2)?></td>
+			<td>₱ <?php echo number_format($row["item_x"],2)?>
+				<a href="action?delete_ord_i=<?php echo $or_ID; ?>" target="_blank"><button  class="glyphicon glyphicon-trash pull-right  btn-danger "></button></span></a>
+			</td>
 	  	</tr>
 		  <?php 
 		  }

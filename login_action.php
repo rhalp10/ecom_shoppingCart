@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['login_user']=$email; // Initializing Session
 					$_SESSION['user_ID'] = $rows['user_ID'] ;
 					$_SESSION['user_level'] = $rows['user_level'] ;
+					$_SESSION['user_Name'] = $rows['user_Name'] ;
 				} 
 				elseif ($rows['user_level'] == '2') 
 				{

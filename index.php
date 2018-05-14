@@ -44,13 +44,13 @@ function getUserIP(){
 $user_IP = getUserIP();
 $_SESSION['user_IP'] = $user_IP;
 if (isset($_SESSION['user_ID'])) {
-  $prod_data_traget = "modal_viewproduct";
-  $prod_view ="view_product";
+
+
 
 }
 else
 {
-  $sql = "SELECT * FROM `temp_order` WHERE IP = '$user_IP'";
+  $sql = "SELECT * FROM `temp_order` WHERE IP = '::1' and status = 1";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) 
   {
@@ -89,8 +89,6 @@ else
       $result = $conn->query($sql);
 
     }
-     $prod_data_traget = "modal_viewproduct1";
-     $prod_view ="view_product1";
   }
 
  
@@ -185,11 +183,14 @@ include('navigation_bar.php');
   <div class="row">
     <?php 
 
-$sql = "SELECT prod.prod_Img,prod.prod_Name,prod.prod_Description,prod.prod_Price,prod.prod_Qnty,prod.prod_date, x.or_Qnty_item,prod.prod_ID FROM `products`  prod
+
+
+
+$result = mysqli_query($conn,"SELECT prod.prod_Img,prod.prod_Name,prod.prod_Description,prod.prod_Price,prod.prod_Qnty,prod.prod_date, x.or_Qnty_item,prod.prod_ID FROM `products`  prod
 LEFT JOIN (SELECT sum(od.or_Qnty) or_Qnty_item,od.prod_ID FROM order_detail od Group by od.prod_ID)  x ON x.prod_ID = prod.prod_ID 
 ORDER BY prod.`prod_date` 
-DESC LIMIT 25";
-$result = $conn->query($sql);
+DESC LIMIT 25");
+
 if ($result->num_rows > 0) {
       // output data of each row
       $i = 0;
@@ -210,7 +211,7 @@ if ($result->num_rows > 0) {
 
          <div class="col-sm-4">
           <div class="panel panel-primary">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
+            <div class="panel-heading"></div>
             <div class="panel-body"><img src="<?php echo $img?>" class="img-responsive" style="width:100%" alt="Image" height="250" width="250"></div>
             <div class="panel-footer">
               <div class="name">
@@ -221,7 +222,7 @@ if ($result->num_rows > 0) {
                 <span class="price-new">₱<?php echo number_format($price_new,"2")?></span> 
               </div>
               <div class="cart">
-                <a class="button" data-toggle="modal" data-target="#<?php echo $prod_data_traget?>" data-id="<?php echo $prod_ID; ?>"  id="<?php echo $prod_view?>">VIEW DETAIL</a>
+                <a class="button" data-toggle="modal" data-target="#modal_viewproduct" data-id="<?php echo $prod_ID; ?>"  id="view_product">VIEW DETAIL</a>
               </div>
             </div>
           </div>
@@ -245,69 +246,15 @@ if ($result->num_rows > 0) {
   include('custom_script.php');
 ?>
 
+
+
 </body>
 
 
 </html>
-<script type="text/javascript">
-         $(document).ready(function(){
-   $(document).on('click', '#view_product1', function(e){
-      
-      e.preventDefault();
-      
-      var uid = $(this).data('id');   // it will get id of clicked row
-      
-      $('#viewprod1-content').html(''); // leave it blank before ajax call
-      $('#viewprod1-loader').show();      // load ajax loader
-      
-      $.ajax({
-        url: 'ajax_view.php',
-        type: 'POST',
-        data: 'id='+uid,
-        dataType: 'html'
-      })
-      .done(function(data){
-        console.log(data);  
-        $('#viewprod1-content').html('');    
-        $('#viewprod1-content').html(data); // load response 
-        $('#viewprod1-loader').hide();      // hide ajax loader 
-      })
-      .fail(function(){
-        $('#viewprod1-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
-        $('#viewprod1-loader').hide();
-      });
-      
-    });
-    // $(document).on('click', '#button_cart', function(e){
-      
-    //   e.preventDefault();
-      
-    //   var uid = $(this).data('id');   // it will get id of clicked row
-      
-    //   $('#addcart-content').html(''); // leave it blank before ajax call
-    //   $('#addcart-loader').show();      // load ajax loader
-      
-    //   $.ajax({
-    //     url: 'action.php',
-    //     type: 'POST',
-    //     data: 'add_cart='+uid,
-    //     dataType: 'html'
-    //   })
-    //   .done(function(data){
-    //     console.log(data);  
-    //     $('#addcart-content').html('');    
-    //     $('#addcart-content').html(data); // load response 
-    //     $('#addcart-loader').hide();      // hide ajax loader 
-    //   })
-    //   .fail(function(){
-    //     $('#addcart-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
-    //     $('#addcart-loader').hide();
-    //   });
-      
-    // });
-</script>
+
   <!-- Modal -->
-<div id="modal_viewproduct1" class="modal fade" role="dialog" style=" padding: 50px !important;">
+<div id="modal_viewproduct" class="modal fade" role="dialog" style=" padding: 50px !important;">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
@@ -317,11 +264,11 @@ if ($result->num_rows > 0) {
         <h4 class="modal-title">Product Details</h4>
       </div>
       <div class="modal-body">
-        <div id="viewprod1-loader" style="display: none; text-align: center;">
+        <div id="viewprod-loader" style="display: none; text-align: center;">
             <img src="img/ajax-loader.gif">
         </div>
         <!-- content will be load here -->                          
-        <div id="viewprod1-content"></div>
+        <div id="viewprod-content"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -331,52 +278,3 @@ if ($result->num_rows > 0) {
   </div>
 </div>
 
-<div id="modal_viewproduct1" class="modal fade" role="dialog" style=" padding: 50px !important;">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Product Details</h4>
-      </div>
-      <div class="modal-body">
-        <div id="viewprod1-loader" style="display: none; text-align: center;">
-            <img src="img/ajax-loader.gif">
-        </div>
-        <!-- content will be load here -->                          
-        <div id="viewprod1-content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- <div id="add_cart_m" class="modal fade" role="dialog" style=" padding: 50px !important;">
-  <div class="modal-dialog modal-lg">
-
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add to Cart</h4>
-      </div>
-      <div class="modal-body">
-        <div id="addcart-loader" style="display: none; text-align: center;">
-            <img src="img/ajax-loader.gif">
-        </div>
-                            
-        <div id="addcart-content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
- -->
